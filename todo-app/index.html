@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My To-do</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1 class="app__title">My To-do</h1>
+
+    <form id="todo-form" class="todo-form" novalidate>
+      <div class="todo-form__row">
+        <label class="visually-hidden" for="todo-input">할 일</label>
+        <input
+          id="todo-input"
+          class="todo-form__input"
+          type="text"
+          name="todo"
+          placeholder="할 일을 입력하세요..."
+          autocomplete="off"
+        >
+        <button type="submit" class="todo-form__submit">추가</button>
+      </div>
+      <p id="input-error" class="input-error" role="alert" hidden></p>
+    </form>
+
+    <p id="stats" class="stats" aria-live="off"></p>
+
+    <p id="empty-state" class="empty-state" hidden>
+      할 일이 없습니다. 새로운 할 일을 추가해 보세요.
+    </p>
+
+    <ul id="todo-list" class="todo-list" hidden></ul>
+
+    <p id="storage-message" class="storage-message" aria-live="polite"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
